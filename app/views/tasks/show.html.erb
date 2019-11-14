@@ -1,0 +1,14 @@
+<h1>This is the task you chose, Raj!</h1>
+
+  <h3><%= @task.title %></h3>
+  <%= link_to task_path(@task), method: :delete, data: {confirm: "Are you sure?"} do %>
+    <i class="fas fa-trash-alt"></i>
+  <% end %>
+  <p><%= @task.details %></p>
+  <p><%= @task.completed %></p>
+  <h3><%= link_to "Update this task", edit_task_path(@task.id) %></h3>
+  <h3><%= link_to "Go back to your tasks", tasks_path %></h3>
+
+  <!-- this is what the prefix is doing at the end of line 9 "/tasks/#{@task.id}/edit" -->
+
+
